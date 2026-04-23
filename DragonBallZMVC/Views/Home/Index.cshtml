@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var guerreros = ViewBag.Guerreros as List<DragonBallZMVC.Models.Guerrero>;
+    var tecnicas = ViewBag.Tecnicas as List<DragonBallZMVC.Models.Tecnica>;
+}
+
+<main class="container">
+
+    <h2 class="mt-4">Lista de Guerreros</h2>
+
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Nombre</th>
+            <th>Raza</th>
+            <th>Nivel de Poder</th>
+            <th>Transformación</th>
+        </tr>
+
+        @foreach (var g in guerreros)
+        {
+            <tr>
+                <td>@g.Nombre</td>
+                <td>@g.Raza</td>
+                <td>@g.NivelPoder</td>
+                <td>@g.Transformacion</td>
+            </tr>
+        }
+    </table>
+
+    <h2 class="mt-5">Lista de Técnicas</h2>
+
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Nivel de Daño</th>
+            <th>Guerrero</th>
+        </tr>
+
+        @foreach (var t in tecnicas)
+        {
+            <tr>
+                <td>@t.NombreTecnica</td>
+                <td>@t.Tipo</td>
+                <td>@t.NivelDano</td>
+                <td>@t.Guerreros.</td>
+            </tr>
+        }
+    </table>
+
+</main>
