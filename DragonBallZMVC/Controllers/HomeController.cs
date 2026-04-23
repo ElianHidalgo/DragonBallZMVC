@@ -14,7 +14,7 @@ namespace DragonBallZMVC.Controllers
         {
 
             ViewBag.Guerreros = db.Guerreros.ToList();
-            ViewBag.Tecnicas = db.Tecnicas.Include("Guerrero").ToList();
+            ViewBag.Tecnicas = db.Tecnicas.ToList();    
 
             return View();
         }
